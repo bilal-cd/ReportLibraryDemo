@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    debugger;
+    $.ajax({
+      type: "GET",
+      cache: false,
+      url: "http://localhost:8080/Report/GetString/1",
+      contentType: 'application/json; charset=utf-8',
+      async: true,
+      processData: false,
+      success: function(res) {
+        alert("Web api called successfully");
+      },
+      error: function(err) {
+        alert("Call web api failed");
+      }
+    });
+  })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReportLibraryDemo\ReportLibraryDemo.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Telerik.Reporting">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Progress\Telerik Reporting R2 2020\Bin\Telerik.Reporting.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
