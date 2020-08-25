@@ -47,9 +47,8 @@ namespace WindowsService
             var lst = new List<ReportRangesFull> {obj, obj1, obj2};
 
             TestObjectDataSource objReport = new TestObjectDataSource();
-            objReport.DataSource = lst;
-
-
+            objReport.table1.DataSource = lst;
+            
             //objReport
 
             //var reportSource = new Telerik.Reporting.InstanceReportSource();

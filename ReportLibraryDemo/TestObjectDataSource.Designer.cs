@@ -9,20 +9,33 @@ namespace ReportLibraryDemo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Telerik.Reporting.TableGroup tableGroup1 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup2 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup3 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
+            this.textBox1 = new Telerik.Reporting.TextBox();
+            this.textBox3 = new Telerik.Reporting.TextBox();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.detail = new Telerik.Reporting.DetailSection();
-            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
             this.table1 = new Telerik.Reporting.Table();
-            this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox2 = new Telerik.Reporting.TextBox();
-            this.textBox3 = new Telerik.Reporting.TextBox();
             this.textBox4 = new Telerik.Reporting.TextBox();
             this.objectDataSource1 = new Telerik.Reporting.ObjectDataSource();
+            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.033D), Telerik.Reporting.Drawing.Unit.Inch(0.35D));
+            this.textBox1.Value = "Test Name\t";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.033D), Telerik.Reporting.Drawing.Unit.Inch(0.35D));
+            this.textBox3.Value = "Test Range";
             // 
             // pageHeaderSection1
             // 
@@ -35,11 +48,6 @@ namespace ReportLibraryDemo
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.table1});
             this.detail.Name = "detail";
-            // 
-            // pageFooterSection1
-            // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1D);
-            this.pageFooterSection1.Name = "pageFooterSection1";
             // 
             // table1
             // 
@@ -65,25 +73,13 @@ namespace ReportLibraryDemo
             tableGroup3.Groupings.Add(new Telerik.Reporting.Grouping(null));
             tableGroup3.Name = "detailTableGroup";
             this.table1.RowGroups.Add(tableGroup3);
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.067D), Telerik.Reporting.Drawing.Unit.Inch(0.7D));
-            // 
-            // textBox1
-            // 
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.033D), Telerik.Reporting.Drawing.Unit.Inch(0.35D));
-            this.textBox1.Value = "Test Name\t";
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.066D), Telerik.Reporting.Drawing.Unit.Inch(0.7D));
             // 
             // textBox2
             // 
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.033D), Telerik.Reporting.Drawing.Unit.Inch(0.35D));
             this.textBox2.Value = "= Fields.MTestName";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.033D), Telerik.Reporting.Drawing.Unit.Inch(0.35D));
-            this.textBox3.Value = "Test Range";
             // 
             // textBox4
             // 
@@ -93,11 +89,17 @@ namespace ReportLibraryDemo
             // 
             // objectDataSource1
             // 
-            this.objectDataSource1.DataSource = typeof(DataModels.Reports.ReportRangesFull);
+            this.objectDataSource1.DataMember = "DataSource";
             this.objectDataSource1.Name = "objectDataSource1";
+            // 
+            // pageFooterSection1
+            // 
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1D);
+            this.pageFooterSection1.Name = "pageFooterSection1";
             // 
             // TestObjectDataSource
             // 
+            this.DataSource = this.objectDataSource1;
             this.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.pageHeaderSection1,
             this.detail,
@@ -121,11 +123,12 @@ namespace ReportLibraryDemo
         private Telerik.Reporting.PageHeaderSection pageHeaderSection1;
         private Telerik.Reporting.DetailSection detail;
         private Telerik.Reporting.PageFooterSection pageFooterSection1;
-        private Telerik.Reporting.Table table1;
         private Telerik.Reporting.TextBox textBox2;
         private Telerik.Reporting.TextBox textBox4;
         private Telerik.Reporting.TextBox textBox1;
         private Telerik.Reporting.TextBox textBox3;
         private Telerik.Reporting.ObjectDataSource objectDataSource1;
+        private System.ComponentModel.IContainer components;
+        public Telerik.Reporting.Table table1;
     }
 }
